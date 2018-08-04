@@ -1,0 +1,25 @@
+<div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="dataSource">
+
+    <!-- LeftTime Column -->
+    <ng-container matColumnDef="leftTime">
+      <mat-header-cell *matHeaderCellDef> 上り </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.leftTime}} </mat-cell>
+    </ng-container>
+
+    <!-- Time Column -->
+    <ng-container matColumnDef="time">
+      <mat-header-cell *matHeaderCellDef> 時刻 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.time}} </mat-cell>
+    </ng-container>
+
+    <!-- RightTime Column -->
+    <ng-container matColumnDef="rightTime">
+      <mat-header-cell *matHeaderCellDef> 下り </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.rightTime}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

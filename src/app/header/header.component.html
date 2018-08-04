@@ -1,0 +1,10 @@
+
+<mat-card>呉線</mat-card>
+
+<mat-form-field>
+  <mat-select placeholder="Station">
+    <mat-option *ngFor="let station of stations" [value]="station.value">
+      {{station.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
