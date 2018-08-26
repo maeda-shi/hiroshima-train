@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { TimeTableComponent } from './time-table/time-table.component';
+import { TimeTableService } from './service/time-table.service';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
@@ -23,8 +25,11 @@ import { MatCardModule } from '@angular/material';
     MatTableModule,
     MatSelectModule,
     MatCardModule,
+    HttpClientModule,
     ],
-  providers: [],
+  providers: [
+    TimeTableService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

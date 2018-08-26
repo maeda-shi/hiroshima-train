@@ -2,9 +2,9 @@
   <mat-table #table [dataSource]="dataSource">
 
     <!-- LeftTime Column -->
-    <ng-container matColumnDef="leftTime">
+    <ng-container matColumnDef="up">
       <mat-header-cell *matHeaderCellDef> 上り </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.leftTime}} </mat-cell>
+      <mat-cell *matCellDef="let element"> {{element.up}} </mat-cell>
     </ng-container>
 
     <!-- Time Column -->
@@ -14,9 +14,9 @@
     </ng-container>
 
     <!-- RightTime Column -->
-    <ng-container matColumnDef="rightTime">
+    <ng-container matColumnDef="down">
       <mat-header-cell *matHeaderCellDef> 下り </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.rightTime}} </mat-cell>
+      <mat-cell *matCellDef="let element"> {{element.down}} </mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
